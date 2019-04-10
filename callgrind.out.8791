@@ -1,0 +1,270 @@
+events: ms hits
+summary: 5000 3784
+fl=
+fn=setSamplingInterval :0
+0 0 0
+
+fl=/home/user1/.nodebrew/node/v8.9.4/lib/node_modules/nodegrind/node_modules/v8-profiler/v8-profiler.js
+fn=startProfiling v8-profiler.js:199
+199 0 0
+cfi=
+cfn=setSamplingInterval :0
+calls=0 0
+199 0 0
+
+fl=/home/user1/.nodebrew/node/v8.9.4/lib/node_modules/nodegrind/nodegrind.js
+fn=startCPU nodegrind.js:84
+84 0 0
+cfi=/home/user1/.nodebrew/node/v8.9.4/lib/node_modules/nodegrind/node_modules/v8-profiler/v8-profiler.js
+cfn=startProfiling v8-profiler.js:199
+calls=0 199
+84 0 0
+
+fl=internal/process/next_tick.js
+fn=nextTick next_tick.js:245
+245 1 1
+
+fl=_stream_writable.js
+fn=onwrite _stream_writable.js:422
+422 0 0
+cfi=internal/process/next_tick.js
+cfn=nextTick next_tick.js:245
+calls=0 245
+422 1 1
+
+fl=
+fn=writeUtf8String :0
+0 18 14
+
+fl=net.js
+fn=createWriteReq net.js:789
+789 0 0
+cfi=
+cfn=writeUtf8String :0
+calls=0 0
+789 18 14
+
+fl=net.js
+fn=Socket._writeGeneric net.js:708
+708 2 2
+cfi=_stream_writable.js
+cfn=onwrite _stream_writable.js:422
+calls=0 422
+708 1 1
+cfi=net.js
+cfn=createWriteReq net.js:789
+calls=0 789
+708 18 14
+
+fl=net.js
+fn=Socket._write net.js:785
+785 0 0
+cfi=net.js
+cfn=Socket._writeGeneric net.js:708
+calls=0 708
+785 22 17
+
+fl=_stream_writable.js
+fn=doWrite _stream_writable.js:379
+379 0 0
+cfi=net.js
+cfn=Socket._write net.js:785
+calls=0 785
+379 22 17
+
+fl=_stream_writable.js
+fn=writeOrBuffer _stream_writable.js:339
+339 0 0
+cfi=_stream_writable.js
+cfn=doWrite _stream_writable.js:379
+calls=0 379
+339 22 17
+
+fl=_stream_writable.js
+fn=Writable.write _stream_writable.js:264
+264 0 0
+cfi=_stream_writable.js
+cfn=writeOrBuffer _stream_writable.js:339
+calls=0 339
+264 22 17
+
+fl=net.js
+fn=Socket.write net.js:699
+699 0 0
+cfi=_stream_writable.js
+cfn=Writable.write _stream_writable.js:264
+calls=0 264
+699 22 17
+
+fl=console.js
+fn=write console.js:93
+93 1 1
+cfi=net.js
+cfn=Socket.write net.js:699
+calls=0 699
+93 22 17
+
+fl=console.js
+fn=log console.js:127
+127 0 0
+cfi=console.js
+cfn=write console.js:93
+calls=0 93
+127 23 18
+
+fl=
+fn=consoleCall :0
+0 0 0
+cfi=console.js
+cfn=log console.js:127
+calls=0 127
+0 23 18
+
+fl=/home/user1/workspace/fibonacci/app.js
+fn=fib app.js:2
+2 4371 3308
+cfi=/home/user1/workspace/fibonacci/app.js
+cfn=fib app.js:2
+calls=0 2
+2 112407 85070
+
+fl=/home/user1/workspace/fibonacci/app.js
+fn= app.js:1
+1 0 0
+cfi=
+cfn=consoleCall :0
+calls=0 0
+1 23 18
+cfi=/home/user1/workspace/fibonacci/app.js
+cfn=fib app.js:2
+calls=0 2
+1 4371 3308
+
+fl=module.js
+fn=Module._compile module.js:600
+600 0 0
+cfi=/home/user1/workspace/fibonacci/app.js
+cfn= app.js:1
+calls=0 1
+600 4394 3326
+cfi=/home/user1/.nodebrew/node/v8.9.4/lib/node_modules/nodegrind/nodegrind.js
+cfn= nodegrind.js:1
+calls=0 1
+600 4394 3326
+
+fl=module.js
+fn=Module._extensions..js module.js:652
+652 0 0
+cfi=module.js
+cfn=Module._compile module.js:600
+calls=0 600
+652 8789 6652
+
+fl=module.js
+fn=Module.load module.js:547
+547 0 0
+cfi=module.js
+cfn=Module._extensions..js module.js:652
+calls=0 652
+547 8789 6652
+
+fl=module.js
+fn=tryModuleLoad module.js:496
+496 0 0
+cfi=module.js
+cfn=Module.load module.js:547
+calls=0 547
+496 8789 6652
+
+fl=module.js
+fn=Module._load module.js:442
+442 0 0
+cfi=module.js
+cfn=tryModuleLoad module.js:496
+calls=0 496
+442 8789 6652
+
+fl=module.js
+fn=Module.require module.js:584
+584 0 0
+cfi=module.js
+cfn=Module._load module.js:442
+calls=0 442
+584 4394 3326
+
+fl=internal/module.js
+fn=require module.js:8
+8 0 0
+cfi=module.js
+cfn=Module.require module.js:584
+calls=0 584
+8 4394 3326
+
+fl=/home/user1/.nodebrew/node/v8.9.4/lib/node_modules/nodegrind/nodegrind.js
+fn=main nodegrind.js:100
+100 0 0
+cfi=/home/user1/.nodebrew/node/v8.9.4/lib/node_modules/nodegrind/nodegrind.js
+cfn=startCPU nodegrind.js:84
+calls=0 84
+100 0 0
+cfi=internal/module.js
+cfn=require module.js:8
+calls=0 8
+100 4394 3326
+
+fl=/home/user1/.nodebrew/node/v8.9.4/lib/node_modules/nodegrind/nodegrind.js
+fn= nodegrind.js:1
+1 0 0
+cfi=/home/user1/.nodebrew/node/v8.9.4/lib/node_modules/nodegrind/nodegrind.js
+cfn=main nodegrind.js:100
+calls=0 100
+1 4394 3326
+
+fl=module.js
+fn=Module.runMain module.js:682
+682 0 0
+cfi=module.js
+cfn=Module._load module.js:442
+calls=0 442
+682 4394 3326
+
+fl=bootstrap_node.js
+fn=startup bootstrap_node.js:12
+12 0 0
+cfi=module.js
+cfn=Module.runMain module.js:682
+calls=0 682
+12 4394 3326
+
+fl=bootstrap_node.js
+fn= bootstrap_node.js:10
+10 0 0
+cfi=bootstrap_node.js
+cfn=startup bootstrap_node.js:12
+calls=0 12
+10 4394 3326
+
+fl=
+fn=(program) :0
+0 603 457
+
+fl=events.js
+fn=emit events.js:156
+156 1 1
+
+fl=
+fn=(root) :0
+0 0 0
+cfi=bootstrap_node.js
+cfn= bootstrap_node.js:10
+calls=0 10
+0 4394 3326
+cfi=
+cfn=(program) :0
+calls=0 0
+0 603 457
+cfi=events.js
+cfn=emit events.js:156
+calls=0 156
+0 1 1
+
